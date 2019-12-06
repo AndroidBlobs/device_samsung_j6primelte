@@ -1,0 +1,39 @@
+#
+# from device/samsung/j6primelte/system.prop
+#
+#
+# system.prop for msm8937_32
+#
+ro.arch=msm8937_32
+#ro.kernel.qemu=1
+ro.kernel.qemu.gles=2
+persist.demo.hdmirotationlock=false
+#Enable DSDS
+#persist.radio.multisim.config=dsds
+#Enable S.LSI USB settings
+dev.usbsetting.embedded=on
+#network type
+#RILD debug level setting
+ro.debug_level=0x494d
+# read DS/SS property
+import /efs/factory.prop
+ro.multisim.simslotcount=2
+# Specify a vendor RIL and a device node
+rild.libpath=/system/lib64/libsec-ril.so
+rild.libargs=-d /dev/umts_ipc0
+#Graphics properties
+debug.sf.enable_hwc_vds=1
+debug.sf.hw=0
+debug.sf.latch_unsignaled=1
+debug.egl.hw=0
+debug.gralloc.enable_fb_ubwc=1
+sdm.debug.disable_skip_validate=1
+sys.disable_ext_animation=1
+#property to enable VDS WFD solution
+persist.hwc.enable_vds=1
+# Property to enable display default color mode
+vendor.display.enable_default_color_mode=1
+#Phone early start enable flag
+sys.config.phone_start_early=true
+
+#
